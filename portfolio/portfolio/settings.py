@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ["127.0.0.1"]
 INSTALLED_APPS = [
     "echo_app",
     "hello_app",
+    "calculator",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
