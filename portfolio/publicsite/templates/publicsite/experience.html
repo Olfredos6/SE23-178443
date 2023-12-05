@@ -1,20 +1,13 @@
 {% extends 'publicsite/layout.html' %}
 {% block mardi %}Experience{% endblock %}
 {% block contenu %}
-{{ maman.1.job_title }}
-{{ request.method }}
-<section class="experience-card">
-  <div class="experience-title">Ingénieur Logiciel Senior <span class="date">(Jan 2018 - Feb 2020)</span></div>
-  <div class="company">Entreprise A</div>
-  <div class="description">Responsable du développement et de la maintenance du backend. Participation active aux
-    réunions d'architecture logicielle et à la résolution des problèmes complexes.</div>
-</section>
 
+{% for experience in experience_data %}
 <section class="experience-card">
-  <div class="experience-title">Développeur Backend <span class="date">(Jan 2018 - Feb 2020)</span></div>
-  <div class="company">Entreprise B</div>
-  <div class="description">Conception et développement de fonctionnalités backend pour des applications web. Travail
-    étroit avec l'équipe frontend pour assurer une intégration harmonieuse.
-  </div>
+  <div class="experience-title"> {{ experience.job_title }}  <span class="date">({{ experience.start_date|date:"M Y" }} - {{ experience.end_date|date:"M Y" }})</span></div>
+  <div class="company">{{ experience.company }}</div>
+  <div class="description">{{ experience.description }}</div>
 </section>
+{% endfor %}
 {% endblock %}
+
