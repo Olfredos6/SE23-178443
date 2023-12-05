@@ -6,4 +6,5 @@ urlpatterns = [
     path("hello-app/", include("hello_app.urls")),
     path("echo-app/", include("echo_app.urls")),
     path("calc/", include("calculator.urls")),
+    path("", include("publicsite.mes_liens")),
 ]
