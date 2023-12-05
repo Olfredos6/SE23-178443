@@ -1,93 +1,71 @@
+{% extends 'publicsite/layout.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'publicsite/css/style.css' %}">
-    <title>Blog</title>
-</head>
-
-<body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">À propos de moi</a></li>
-                <li><a href="/experience">Mon Expérience</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="blog-container">
-        <div class="main-content">
-            <!-- Main content with blog posts -->
-            <div class="blog-post" onclick="location.href='article1.html'">
-                <img src="{% static 'publicsite/images/django-js.png' %}" alt="Post 1 Image">
-                <div class="blog-post-title">FullStack Django</div>
-                <div class="blog-post-tags">Tags: Web Development, Python, JavaScript</div>
-            </div>
-
-            <div class="blog-post" onclick="location.href='article2.html'">
-                <img src="{% static 'publicsite/images/m-data.png' %}" alt="Post 2 Image">
-                <div class="blog-post-title">Python et l'IA</div>
-                <div class="blog-post-tags">Tags: Data Science, Machine Learning, Python</div>
-            </div>
-
-
-            <div class="blog-post" onclick="location.href='article2.html'">
-                <img src="{% static 'publicsite/images/django-arch.png' %}" alt="Post 2 Image">
-                <div class="blog-post-title">Architecture des projets Django</div>
-                <div class="blog-post-tags">Tags: Web Development, Python, Backend</div>
-            </div>
-
+{% block mardi %}Blog{% endblock %}
+{% block contenu %}
+<div class="blog-container">
+    <div class="main-content">
+        <!-- Main content with blog posts -->
+        <div class="blog-post" onclick="location.href='article1.html'">
+            <img src="{% static 'publicsite/images/django-js.png' %}" alt="Post 1 Image">
+            <div class="blog-post-title">FullStack Django</div>
+            <div class="blog-post-tags">Tags: Web Development, Python, JavaScript</div>
         </div>
 
-        <div class="right-side-content">
-            <div class="right-section">
-                <div class="section-title">Articles les plus populaires</div>
-                <div class="post-item">
-                    <div class="post-title">Titre du message populaire 1</div>
-                    <div class="post-tags">Tags: Web Dev, JavaScript</div>
-                </div>
-
-                <div class="post-item">
-                    <div class="post-title">Titre du message populaire 2</div>
-                    <div class="post-tags">Tags: Data Science, Python</div>
-                </div>
-
-                <div class="post-item">
-                    <div class="post-title">Titre du message populaire 3</div>
-                    <div class="post-tags">Tags: UX Design, UI</div>
-                </div>
-            </div>
-
-            <div class="right-section">
-                <div class="section-title">Postes en vedette</div>
-                <div class="post-item">
-                    <div class="post-title">Titre de l'article en vedette 1</div>
-                    <div class="post-tags">Tags: Machine Learning, AI</div>
-                </div>
-
-                <div class="post-item">
-                    <div class="post-title">Titre de l'article en vedette 2</div>
-                    <div class="post-tags">Tags: Web Design, CSS</div>
-                </div>
-
-                <div class="post-item">
-                    <div class="post-title">Titre de l'article en vedette 3</div>
-                    <div class="post-tags">Tags: Mobile App, React Native</div>
-                </div>
-            </div>
-
-            <div class="right-section footer">
-                <p>&copy; 2023 Your Blog. All rights reserved.</p>
-            </div>
+        <div class="blog-post" onclick="location.href='article2.html'">
+            <img src="{% static 'publicsite/images/m-data.png' %}" alt="Post 2 Image">
+            <div class="blog-post-title">Python et l'IA</div>
+            <div class="blog-post-tags">Tags: Data Science, Machine Learning, Python</div>
         </div>
+
+
+        <div class="blog-post" onclick="location.href='article2.html'">
+            <img src="{% static 'publicsite/images/django-arch.png' %}" alt="Post 2 Image">
+            <div class="blog-post-title">Architecture des projets Django</div>
+            <div class="blog-post-tags">Tags: Web Development, Python, Backend</div>
+        </div>
+
     </div>
 
-</body>
+    <div class="right-side-content">
+        <div class="right-section">
+            <div class="section-title">Articles les plus populaires</div>
+            <div class="post-item">
+                <div class="post-title">Titre du message populaire 1</div>
+                <div class="post-tags">Tags: Web Dev, JavaScript</div>
+            </div>
 
-</html>
+            <div class="post-item">
+                <div class="post-title">Titre du message populaire 2</div>
+                <div class="post-tags">Tags: Data Science, Python</div>
+            </div>
+
+            <div class="post-item">
+                <div class="post-title">Titre du message populaire 3</div>
+                <div class="post-tags">Tags: UX Design, UI</div>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="section-title">Postes en vedette</div>
+            <div class="post-item">
+                <div class="post-title">Titre de l'article en vedette 1</div>
+                <div class="post-tags">Tags: Machine Learning, AI</div>
+            </div>
+
+            <div class="post-item">
+                <div class="post-title">Titre de l'article en vedette 2</div>
+                <div class="post-tags">Tags: Web Design, CSS</div>
+            </div>
+
+            <div class="post-item">
+                <div class="post-title">Titre de l'article en vedette 3</div>
+                <div class="post-tags">Tags: Mobile App, React Native</div>
+            </div>
+        </div>
+
+        <div class="right-section footer">
+            <p>&copy; 2023 Your Blog. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
