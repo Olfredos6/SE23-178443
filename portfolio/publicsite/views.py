@@ -42,10 +42,8 @@ def experience(request):
 
 
 def blog(request):
-    javascript_tag = models.Tag.objects.get(
-        name="JavaScript"
-    )  # SELECT * FROM table_name WHERE name="JavaScript";
-    return render(request, "publicsite/blog.html", {"tags": [javascript_tag]})
+    posts = models.Post.objects.all()
+    return render(request, "publicsite/blog.html", {"posts": posts})
 
 
 def test_layout(request):

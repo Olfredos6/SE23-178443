@@ -2,28 +2,16 @@
 {% load static %}
 {% block mardi %}Blog{% endblock %}
 {% block contenu %}
-{{ tags.0.name }}
 <div class="blog-container">
     <div class="main-content">
         <!-- Main content with blog posts -->
+        {% for post in posts %}
         <div class="blog-post" onclick="location.href='article1.html'">
             <img src="{% static 'publicsite/images/django-js.png' %}" alt="Post 1 Image">
-            <div class="blog-post-title">FullStack Django</div>
+            <div class="blog-post-title">{{ post.title }}</div>
             <div class="blog-post-tags">Tags: Web Development, Python, JavaScript</div>
         </div>
-
-        <div class="blog-post" onclick="location.href='article2.html'">
-            <img src="{% static 'publicsite/images/m-data.png' %}" alt="Post 2 Image">
-            <div class="blog-post-title">Python et l'IA</div>
-            <div class="blog-post-tags">Tags: Data Science, Machine Learning, Python</div>
-        </div>
-
-
-        <div class="blog-post" onclick="location.href='article2.html'">
-            <img src="{% static 'publicsite/images/django-arch.png' %}" alt="Post 2 Image">
-            <div class="blog-post-title">Architecture des projets Django</div>
-            <div class="blog-post-tags">Tags: Web Development, Python, Backend</div>
-        </div>
+        {% endfor %}
 
     </div>
 
