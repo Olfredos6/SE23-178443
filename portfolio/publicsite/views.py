@@ -6,6 +6,8 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from . import models
+
 EXPERIENCE_DATA_FILE = Path(
     settings.BASE_DIR / "publicsite" / "data" / "experience.json"
 )
@@ -40,7 +42,10 @@ def experience(request):
 
 
 def blog(request):
-    return render(request, "publicsite/blog.html")
+    javascript_tag = models.Tag.objects.get(
+        name="JavaScript"
+    )  # SELECT * FROM table_name WHERE name="JavaScript";
+    return render(request, "publicsite/blog.html", {"tags": [javascript_tag]})
 
 
 def test_layout(request):
