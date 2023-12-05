@@ -1,41 +1,17 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'publicsite/layout.html' %}
+{% block contenu %}
+<section class="experience-card">
+  <div class="experience-title">Ingénieur Logiciel Senior <span class="date">(Jan 2018 - Feb 2020)</span></div>
+  <div class="company">Entreprise A</div>
+  <div class="description">Responsable du développement et de la maintenance du backend. Participation active aux
+    réunions d'architecture logicielle et à la résolution des problèmes complexes.</div>
+</section>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'publicsite/css/style.css' %}">
-  <title>Experience</title>
-</head>
-
-<body>
-
-  <header>
-    <nav>
-      <ul>
-        <li><a href="/">À propos de moi</a></li>
-        <li><a href="/experience">Mon Expérience</a></li>
-        <li><a href="/blog">Blog</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="experience-card">
-    <div class="experience-title">Ingénieur Logiciel Senior <span class="date">(Jan 2018 - Feb 2020)</span></div>
-    <div class="company">Entreprise A</div>
-    <div class="description">Responsable du développement et de la maintenance du backend. Participation active aux
-      réunions d'architecture logicielle et à la résolution des problèmes complexes.</div>
-  </section>
-
-  <section class="experience-card">
-    <div class="experience-title">Développeur Backend <span class="date">(Jan 2018 - Feb 2020)</span></div>
-    <div class="company">Entreprise B</div>
-    <div class="description">Conception et développement de fonctionnalités backend pour des applications web. Travail
-      étroit avec l'équipe frontend pour assurer une intégration harmonieuse.
-    </div>
-  </section>
-
-</body>
-
-</html>
+<section class="experience-card">
+  <div class="experience-title">Développeur Backend <span class="date">(Jan 2018 - Feb 2020)</span></div>
+  <div class="company">Entreprise B</div>
+  <div class="description">Conception et développement de fonctionnalités backend pour des applications web. Travail
+    étroit avec l'équipe frontend pour assurer une intégration harmonieuse.
+  </div>
+</section>
+{% endblock %}

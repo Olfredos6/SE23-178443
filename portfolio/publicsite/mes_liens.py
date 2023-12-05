@@ -6,4 +6,5 @@ urlpatterns = [
     path("", views.index),
     path("experience/", views.experience),
     path("blog/", views.blog),
+    path("tt/", views.test_layout),
 ]

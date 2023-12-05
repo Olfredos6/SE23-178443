@@ -13,3 +13,7 @@ def experience(request):
 
 def blog(request):
     return render(request, "publicsite/blog.html")
+
+
+def test_layout(request):
+    return render(request, "publicsite/layout.html")
