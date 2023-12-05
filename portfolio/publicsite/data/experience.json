@@ -1,0 +1,36 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "job_title": "Ingénieur Logiciel Senior",
+      "company": "Entreprise B",
+      "start_date": "06-03-2020",
+      "end_date": null,
+      "description": "Responsable du développement et de la maintenance du backend. Participation active aux réunions d'architecture logicielle et à la résolution des problèmes complexes."
+    },
+    {
+      "id": 2,
+      "job_title": "Développeur Backend",
+      "company": "Entreprise A",
+      "start_date": "14-01-2018",
+      "end_date": "14-02-2020",
+      "description": "Conception et développement de fonctionnalités backend pour des applications web. Travail étroit avec l'équipe frontend pour assurer une intégration harmonieuse."
+    },
+    {
+      "id": 3,
+      "job_title": "Développeur Python",
+      "company": "Entreprise C",
+      "start_date": "04-05-2016",
+      "end_date": "26-12-2017",
+      "description": "Développement de solutions backend en Python pour des applications de gestion de données. Optimisation des performances et résolution des bugs."
+    },
+    {
+      "id": 4,
+      "job_title": "Chef d'équipe Développement Backend",
+      "company": "Entreprise D",
+      "start_date": "14-01-2015",
+      "end_date": "05-05-2016",
+      "description": "Encadrement d'une équipe de développeurs backend. Conception et mise en œuvre de solutions logicielles robustes et évolutives pour répondre aux besoins clients."
+    }
+  ]
+}
